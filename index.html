@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Buddy — Privacy-First Financial Intelligence</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="nav-left">
+        <div class="brand-logo">BB</div>
+        <div class="brand-info">
+          <div class="brand-title-row">
+            <h1 class="brand-name">Budget Buddy</h1>
+            <span class="badge badge-subtle">Gemma 2 + TabPFN</span>
+          </div>
+          <p class="brand-subtitle">Privacy-first spending habit analyzer &amp; subscription trap detector</p>
+        </div>
+        <!-- Privacy Indicator Badge -->
+        <div class="privacy-badge" id="privacyBadge" title="Click for privacy details">
+          <span class="pulse-dot"></span>
+          <span class="privacy-icon">🛡️</span>
+          <span>100% Local &amp; Private</span>
+          
+          <div class="privacy-tooltip" id="privacyTooltip">
+            <div class="tooltip-header">
+              <span>🔒 Zero Cloud Ingestion</span>
+            </div>
+            <p>Your raw bank statements, dollar amounts, and merchant records never leave this machine.</p>
+            <ul>
+              <li><strong>Gemma 2:</strong> Runs locally via Ollama / in-memory.</li>
+              <li><strong>TabPFN:</strong> In-browser tabular density modeling.</li>
+              <li><strong>Tiger Data:</strong> 384-dim pgvector embeddings stored locally.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button id="loadSampleBtn" class="btn btn-secondary">
+          <span>✨</span>
+          <span id="loadSampleText">Reset Sample Data</span>
+        </button>
+        <button id="openUploadBtn" class="btn btn-primary">
+          <span>📁</span>
+          <span>Upload CSV</span>
+        </button>
+        <button id="openDebugBtn" class="btn btn-outline" title="Open Sentry Telemetry & Latency Dashboard">
+          <span class="dot-amber"></span>
